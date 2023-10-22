@@ -1,12 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
-import Post from './components/Post';
-import { useEffect, useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
 
-
-export default function App() {
-
-  const [posts, setPosts]= useState([])
+const [posts, setPosts]= useState([])
   useEffect(() =>  {
       fetch('https://workshop.elyasasmad.com/posts')
       .then ((response) => response.json())
@@ -38,15 +33,7 @@ export default function App() {
       <StatusBar style="auto" />
     </View>
   );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default homecreen
 
-
+const styles = StyleSheet.create({})
